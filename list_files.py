@@ -6,12 +6,21 @@ import numpy as np
 
 def get_file_names():
     # Get file names (json and images share same names)
-    arr0 = os.listdir('/shared/rtis_lab/data/FLAME/custom_split/train_images')
-    arr1 = os.listdir('/shared/rtis_lab/data/FLAME/custom_split/train_masks')
+    img_dir = '/shared/rtis_lab/data/FLAME/custom_split/train_images/'
+    mask_dir = '/shared/rtis_lab/data/FLAME/custom_split/train_masks/'
+
+    arr0 = os.listdir(img_dir)
+    arr1 = os.listdir(mask_dir)
     arr2 = []
 
     arr0.sort()
     arr1.sort()
+
+    for ii in range(0, len(arr0)):
+        arr0[ii] = img_dir + arr0[ii]
+        
+    for ii in range(0, len(arr1)):
+        arr1[ii] = mask_dir + arr1[ii]
 
     for ii in range(0, len(arr0)):
         arr2.append(arr0[ii] + '\t' + arr1[ii])
