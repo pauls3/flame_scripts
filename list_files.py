@@ -11,7 +11,7 @@ def get_file_names():
     arr2 = []
 
     for ii in range(0, len(arr0)):
-        arr2.append("{arr0[ii]}\t{arr1[ii]}")
+        arr2.append(arr0[ii] + '\t' + arr1[ii])
 
     return arr2
 
