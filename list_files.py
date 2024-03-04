@@ -10,7 +10,7 @@ def get_file_names():
     arr1 = os.listdir('/shared/rtis_lab/data/FLAME/custom_split/train_masks')
     arr2 = []
 
-    for ii in range(0, len(arr0, arr1)):
+    for ii in range(0, len(arr0)):
         arr2.append("{arr0[ii]}\t{arr1[ii]}")
 
     return arr2
