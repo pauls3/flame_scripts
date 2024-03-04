@@ -6,8 +6,8 @@ import numpy as np
 
 def get_file_names():
     # Get file names (json and images share same names)
-    img_dir = '/shared/rtis_lab/data/FLAME/custom_split/validation_images/'
-    mask_dir = '/shared/rtis_lab/data/FLAME/custom_split/validation_masks/'
+    img_dir = '/shared/rtis_lab/data/FLAME/custom_split/test_images/'
+    mask_dir = '/shared/rtis_lab/data/FLAME/custom_split/test_masks/'
 
     arr0 = os.listdir(img_dir)
     arr1 = os.listdir(mask_dir)
@@ -29,7 +29,7 @@ def get_file_names():
 
 
 def write_files_txt(file_names):
-    with open('val.lst', 'w') as file1:
+    with open('test.lst', 'w') as file1:
         file1.writelines(line + '\n' for line in file_names)
 
 
